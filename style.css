@@ -1,0 +1,97 @@
+.tooltip-container {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 100px auto 0;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.space-between-nav-items {
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:blue
+}
+
+.msg-container {
+    position: absolute;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.msg-container::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 75px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent;
+}
+
+.msg1 {
+    top: -45px;
+    left: 80px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.msg2 {
+    top: -45px;
+    left: 170px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.msg3 {
+    top: -45px;
+    left: 250px;
+    animation: scaleIn 1s ease-in-out;
+}
+
+.target {
+    display: none;
+}
+
+a:hover + .target {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-30%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
